@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title> My 2nd web page </title>
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1570824105192-a7bb72b73141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+      "https://www.w3schools.com/images/colorpicker.gif",
+      "https://media3.s-nbcnews.com/j/newscms/2019_41/3047866/191010-japan-stalker-mc-1121_06b4c20bbf96a51dc8663f334404a899.fit-760w.JPG",
+      "https://cdn.cnn.com/cnnnext/dam/assets/191203174105-edward-whitaker-1-large-169.jpg",
+      "https://www.vitalimages.com/wp-content/uploads/HIMSSHomeBanner2.jpg"
+    ];
+
+    const onBack = () => {
+      const slideNumberSpan = document.querySelector('#slideNumber');
+      let nextSlideNum = slideNumberSpan.innerHTML <= 1 ? images.length : slideNumberSpan.innerHTML - 1;
+      slideNumberSpan.innerHTML = nextSlideNum;
+
+      const imageHolder = document.getElementById("imageHolder");
+      imageHolder.src = images[nextSlideNum - 1];
+    };
+
+    const onNext = () => {
+      const slideNumberSpan = document.querySelector('#slideNumber');
+      let nextSlideNum = slideNumberSpan.innerHTML >= images.length ? 1 : parseInt(slideNumberSpan.innerHTML) + 1;
+      slideNumberSpan.innerHTML = nextSlideNum;
+
+      const imageHolder = document.getElementById("imageHolder");
+      imageHolder.src = images[nextSlideNum - 1];
+    };
+  </script>
+</head>
+
+<body>
+  <div>
+    <button id="slideBack" onclick="onBack()">Previous</button>
+    Image: <span id="slideNumber">1</span>
+    <button id="slideNext" onclick="onNext()">Next</button>
+  </div>
+  <img
+    id="imageHolder"
+    src="https://images.unsplash.com/photo-1570824105192-a7bb72b73141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    style="width: 500px;height: 500px;"
+  >
+</body>
+
+</html>
