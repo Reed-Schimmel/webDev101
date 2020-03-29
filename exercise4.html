@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <title> Exercise 4 </title>
+  <script type="text/javascript" src="./changeColor.js"></script>
+</head>
+
+<body>
+  <p id="mainText">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Eget gravida cum sociis natoque penatibus. Nisl nisi scelerisque eu ultrices vitae. Sit amet massa vitae
+    tortor condimentum lacinia quis vel eros. Tristique senectus et netus et malesuada fames ac turpis. Facilisis
+    volutpat est velit egestas dui. Facilisis volutpat est velit egestas dui id. Tristique senectus et netus et
+    malesuada fames ac turpis egestas. Porttitor leo a diam sollicitudin tempor. Consectetur adipiscing elit duis
+    tristique sollicitudin. Varius duis at consectetur lorem donec massa sapien faucibus. Feugiat in fermentum posuere
+    urna nec. Senectus et netus et malesuada fames ac turpis egestas. Ipsum consequat nisl vel pretium lectus quam id
+    leo. Odio facilisis mauris sit amet massa vitae tortor. Massa enim nec dui nunc mattis enim.
+  </p>
+
+  <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+      <div style="display: flex; flex-direction: column; flex: -1;">
+        <h3>Border</h3>
+
+        <div>
+          <label for="borderRed">Red value (0-255):</label>
+          <input type="number" id="borderRed" name="borderRed" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="borderGreen">Green value (0-255):</label>
+          <input type="number" id="borderGreen" name="borderGreen" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="borderBlue">Blue value (0-255):</label>
+          <input type="number" id="borderBlue" name="borderBlue" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="borderWidth">Width:</label>
+          <input type="number" id="borderWidth" name="borderWidth" value="0" /><br />
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; flex: -1">
+        <h3>Background Color</h3>
+
+        <div>
+          <label for="backgroundRed">Red value (0-255):</label>
+          <input type="number" id="backgroundRed" name="backgroundRed" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="backgroundGreen">Green value (0-255):</label>
+          <input type="number" id="backgroundGreen" name="backgroundGreen" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="backgroundBlue">Blue value (0-255):</label>
+          <input type="number" id="backgroundBlue" name="backgroundBlue" value="255" /><br />
+        </div>
+      </div>
+
+    </div>
+    <input style="
+      font-size: large;
+      border-style: solid;
+      border-width: 1;
+      border-color: black;
+      border-radius: 5px;
+      align-self: center;
+      margin-top: 20px;
+    " type="submit" value="Submit change" onclick="changeColor()">
+  </div>
+
+</body>
+
+</html>
