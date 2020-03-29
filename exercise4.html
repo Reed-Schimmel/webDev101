@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title> My first web page </title>
+  <title> Exercise 4 </title>
   <script type="text/javascript" src="./changeColor.js"></script>
 </head>
 
@@ -18,38 +18,60 @@
   </p>
 
   <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+      <div style="display: flex; flex-direction: column; flex: -1;">
+        <h3>Border</h3>
 
-    <div style="display: flex; flex-direction: column; flex: 1">
+        <div>
+          <label for="borderRed">Red value (0-255):</label>
+          <input type="number" id="borderRed" name="borderRed" value="255" /><br />
+        </div>
 
-      <h3>Border</h3>
+        <div>
+          <label for="borderGreen">Green value (0-255):</label>
+          <input type="number" id="borderGreen" name="borderGreen" value="255" /><br />
+        </div>
 
-      <label for="borderRed">Red value (0-255):</label>
-      <input type="number" id="borderRed" name="borderRed" /><br />
+        <div>
+          <label for="borderBlue">Blue value (0-255):</label>
+          <input type="number" id="borderBlue" name="borderBlue" value="255" /><br />
+        </div>
 
-      <label for="borderGreen">Green value (0-255):</label>
-      <input type="number" id="borderGreen" name="borderGreen" /><br />
+        <div>
+          <label for="borderWidth">Width:</label>
+          <input type="number" id="borderWidth" name="borderWidth" value="0" /><br />
+        </div>
+      </div>
 
-      <label for="borderBlue">Blue value (0-255):</label>
-      <input type="number" id="borderBlue" name="borderBlue" /><br />
+      <div style="display: flex; flex-direction: column; flex: -1">
+        <h3>Background Color</h3>
 
-      <label for="borderWidth">Width:</label>
-      <input type="number" id="borderWidth" name="borderWidth" /><br />
+        <div>
+          <label for="backgroundRed">Red value (0-255):</label>
+          <input type="number" id="backgroundRed" name="backgroundRed" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="backgroundGreen">Green value (0-255):</label>
+          <input type="number" id="backgroundGreen" name="backgroundGreen" value="255" /><br />
+        </div>
+
+        <div>
+          <label for="backgroundBlue">Blue value (0-255):</label>
+          <input type="number" id="backgroundBlue" name="backgroundBlue" value="255" /><br />
+        </div>
+      </div>
+
     </div>
-
-    <div style="display: flex; flex-direction: column;">
-      <h3>Background Color</h3>
-      <label for="backgroundRed">Red value (0-255):</label>
-      <input type="number" id="backgroundRed" name="backgroundRed" /><br />
-
-      <label for="backgroundGreen">Green value (0-255):</label>
-      <input type="number" id="backgroundGreen" name="backgroundGreen" /><br />
-
-      <label for="backgroundBlue">Blue value (0-255):</label>
-      <input type="number" id="backgroundBlue" name="backgroundBlue" /><br />
-    </div>
-
-    <input type="submit" value="Submit change" onclick="changeColor()">
-
+    <input style="
+      font-size: large;
+      border-style: solid;
+      border-width: 1;
+      border-color: black;
+      border-radius: 5px;
+      align-self: center;
+      margin-top: 20px;
+    " type="submit" value="Submit change" onclick="changeColor()">
   </div>
 
 </body>
